@@ -1,23 +1,26 @@
-## Project: Chain - Blockchain-Based Secure Communication Experiment
+## Chain - Blockchain-Based Secure Communication Experiment
 
-**1. Goal/Vision:**
+_why not_
+
+- [Chain - Blockchain-Based Secure Communication Experiment](#chain---blockchain-based-secure-communication-experiment)
+  - [Goal/Vision](#goalvision)
+  - [Core Features](#core-features)
+  - [Key Components / Architecture (Highly Dependent on Focus)](#key-components--architecture-highly-dependent-on-focus)
+  - [Tech Stack](#tech-stack)
+  - [Potential Challenges](#potential-challenges)
+
+### Goal/Vision
+
 To explore the feasibility and potential benefits/drawbacks of using blockchain concepts to establish or enhance secure communication channels between a frontend and backend, focusing on aspects like identity, message integrity, or non-repudiation. Highly experimental.
 
-**2. Core Features (Exploratory - Choose a Focus):**
+### Core Features
 
--   **Focus Area 1: Decentralized Identity & Authentication:**
-    -   Client authenticates using a blockchain wallet (e.g., MetaMask).
-    -   Backend verifies client identity via signed messages tied to their public key/address.
-    -   Session establishment based on verified blockchain identity.
--   **Focus Area 2: Message Integrity/Non-Repudiation:**
+-   **Message Integrity/Non-Repudiation:**
     -   Client signs messages (or message hashes) using their private key before sending.
     -   Backend verifies the signature using the client's public key.
     -   Optionally, message hashes (or encrypted messages) could be anchored/logged on a blockchain (testnet) as immutable proof of communication (high cost/latency).
--   **Focus Area 3: Smart Contract Mediated Communication:**
-    -   Define rules or state for communication within a smart contract on a testnet (e.g., permissioning, rate limiting).
-    -   Client/Server interact with the contract to validate or log communication steps. (Likely complex and slow).
 
-**3. Key Components / Architecture (Highly Dependent on Focus):**
+### Key Components / Architecture (Highly Dependent on Focus)
 
 -   **Frontend (Web Application):**
     -   **Web3 Integration:** Library like `ethers.js` or `web3.js` to interact with blockchain nodes and user wallets (MetaMask).
@@ -31,7 +34,7 @@ To explore the feasibility and potential benefits/drawbacks of using blockchain 
 -   **Blockchain / Smart Contracts (Testnet like Sepolia, Goerli, or local like Ganache):**
     -   **Smart Contract (if applicable):** Written in Solidity, defining data structures and functions relevant to the chosen focus (e.g., identity registry, message log).
 
-**4. Tech Stack:**
+### Tech Stack
 
 -   Frontend: Any framework (React, Vue, etc.), `ethers.js` / `web3.js`.
 -   Backend: Any language (Node.js, Go, Python), relevant crypto libraries for signature verification (e.g., `ethers.js` utils, Python `eth_account`).
@@ -39,7 +42,7 @@ To explore the feasibility and potential benefits/drawbacks of using blockchain 
 -   Smart Contracts: Solidity.
 -   Development Tools: Hardhat, Truffle.
 
-**5. Potential Challenges:**
+### Potential Challenges
 
 -   **Complexity:** Blockchain interactions add significant complexity compared to traditional methods.
 -   **Latency & Cost:** On-chain transactions are slow and cost gas (even on testnets). Relying heavily on them for real-time communication is impractical.
